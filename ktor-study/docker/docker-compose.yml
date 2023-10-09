@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  db_mysql:
+    container_name: ktor-mysql
+    image: mysql/mysql-server:5.7
+    environment:
+      MYSQL_DATABASE: 'ktor_study'
+      MYSQL_ROOT_USER: 'ktor_study_root'
+      MYSQL_ROOT_PASSWORD: 'ktor_study_root'
+      TZ: Asia/Seoul
+    ports:
+      - '3366:3306'
+    volumes:
+      - './volumes/mysql/default:/var/lib/mysql'
+    command:
+      - 'mysqld'
+      - '--character-set-server=utf8mb4'
+      - '--collation-server=utf8mb4_unicode_ci'
+      - '--sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
