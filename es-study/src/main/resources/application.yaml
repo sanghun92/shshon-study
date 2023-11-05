@@ -1,0 +1,15 @@
+infra:
+  elasticsearch:
+    host: localhost
+    port: 9200
+    username: elastic
+    password: changeme
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          elasticsearch:
+            client:
+              WIRE: TRACE
