@@ -1,7 +1,8 @@
-package com.shshon.esstudy.product.infra.elastic_search
+package com.shshon.esstudy.product.infra
 
 import com.shshon.esstudy.product.domain.Product
 import com.shshon.esstudy.product.domain.ProductRepository
+import com.shshon.esstudy.product.infra.elastic_search.ProductElasticsearchRepository
 import org.springframework.stereotype.Repository
 
 @Repository
