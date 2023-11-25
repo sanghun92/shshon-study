@@ -1,6 +1,8 @@
 package shshon.study.leet_code.easy
 
-class `Merge-Two-Sorted-Lists` {
+import shshon.study.leet_code.ListNode
+
+class Merge_Two_Sorted_Lists {
 
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         if (list1 != null && list2 != null) {
@@ -17,10 +19,6 @@ class `Merge-Two-Sorted-Lists` {
             return list2;
         return list1;
     }
-}
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
 }
 
 // 1
