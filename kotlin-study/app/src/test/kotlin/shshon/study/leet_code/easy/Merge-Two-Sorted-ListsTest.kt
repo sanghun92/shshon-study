@@ -15,8 +15,6 @@ class `Merge-Two-Sorted-ListsTest` {
             list1 = list1,
             list2 = list2
         )
-
-
     }
 
     private fun createListNode(list: List<Int>) = list.map {
