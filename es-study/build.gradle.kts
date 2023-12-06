@@ -28,8 +28,14 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("mysql:mysql-connector-java:8.0.33")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+    testImplementation("org.testcontainers:junit-jupiter:1.19.3")
+    testImplementation("org.testcontainers:mysql:1.19.3")
+    testImplementation("org.testcontainers:elasticsearch:1.19.3")
 }
 
 tasks.withType<KotlinCompile> {
