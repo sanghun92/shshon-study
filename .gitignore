@@ -36,4 +36,4 @@ out/
 .vscode/
 
 ### docker volumes ###
-!**/docker/volumes/
+**/docker/volumes/

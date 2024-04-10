@@ -7,7 +7,6 @@ class CustomerRegisterService(
     private val customerRepository: CustomerRepository,
 ) {
     fun register(command: CustomerRegisterCommand): String {
-        val customer = this.customerRepository.save(command.toDomain())
-        return customer.id
+        return ""
     }
 }

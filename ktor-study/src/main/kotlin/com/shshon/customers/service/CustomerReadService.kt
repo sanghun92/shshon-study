@@ -8,6 +8,6 @@ class CustomerReadService(
 ) {
 
     fun getById(id: String): Customer? {
-        return customerRepository.findById(id = id)
+        return null
     }
 }

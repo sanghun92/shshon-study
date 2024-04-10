@@ -15,6 +15,7 @@ plugins {
 }
 
 repositories {
+    maven { url = uri("https://repo.osgeo.org/repository/release/") }
     // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
@@ -22,6 +23,8 @@ repositories {
 dependencies {
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+
+    implementation("org.geotools:gt-shapefile:29.5")
 
     // Use the Kotlin JDK 8 standard library.
 //    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
