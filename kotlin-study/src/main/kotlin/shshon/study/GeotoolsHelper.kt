@@ -1,18 +1,10 @@
 package shshon.study
 
-import org.geotools.data.DataStoreFinder
-import org.geotools.data.FeatureSource
-import org.geotools.feature.FeatureCollection
-import org.opengis.feature.simple.SimpleFeature
-import org.opengis.feature.simple.SimpleFeatureType
-import org.opengis.filter.Filter
-import java.io.File
-
 
 class GeotoolsHelper {
 
     fun read() {
-        val file = File("/Users/shonsanghun/dev/projects/shshon-study/kotlin-study/app/src/main/resources/file/BND_SIGUNGU_PG.shp")
+        /*val file = File("/Users/shonsanghun/dev/projects/shshon-study/kotlin-study/app/src/main/resources/file/BND_SIGUNGU_PG.shp")
         val map: MutableMap<String, Any?> = HashMap()
         map["url"] = file.toURI().toURL()
 
@@ -31,6 +23,6 @@ class GeotoolsHelper {
                 print(": ")
                 println(feature.defaultGeometryProperty.value)
             }
-        }
+        }*/
     }
 }
