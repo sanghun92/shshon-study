@@ -4,9 +4,7 @@ import com.shshon.common.infra.data_access.DatabaseFactory.dbQuery
 import com.shshon.customers.domain.Customer
 import com.shshon.customers.domain.repository.CustomerRepository
 import com.shshon.customers.infra.domain.data_access.CustomerTable
-import org.jetbrains.exposed.sql.ResultRow
-import org.jetbrains.exposed.sql.insert
-import org.jetbrains.exposed.sql.select
+import org.jetbrains.exposed.sql.*
 
 class CustomerExposedRepository: CustomerRepository {
 
@@ -20,7 +18,8 @@ class CustomerExposedRepository: CustomerRepository {
 
     override suspend fun findById(id: String): Customer? = dbQuery {
         CustomerTable
-            .select { CustomerTable.id eq id }
+            .selectAll()
+            .where { CustomerTable.id eq id }
             .map(::resultRowToCustomer)
             .singleOrNull()
     }
