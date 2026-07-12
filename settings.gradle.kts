@@ -4,5 +4,5 @@ include(
     ":es-study",
     ":kotlin-study",
     ":ktor-study",
-    ":ktor-study",
+    ":spring-ai-study",
 )
